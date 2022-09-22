@@ -1,11 +1,16 @@
 
 import './App.css';
-
+import React from 'react';
+import WaveBackground from './components/WaveBackground';
+import SearchBar from './components/SearchBar';
+import Hero from './components/Hero';
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <Hero />
+      <SearchBar />
+      <WaveBackground />
+    </>
   );
 }
 
