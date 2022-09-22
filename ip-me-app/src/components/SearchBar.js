@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({currentIp}) => {
     return (
         <div className="flex items-center justify-center p-10">
             <div className="flex border-2 rounded">
-                <input type="text" className="px-4 py-2 w-80" placeholder="Enter IP Address" />
+                <input type="text" className="px-4 py-2 w-80" placeholder="Enter IP Address" defaultValue={currentIp} />
                 <button className="flex items-center justify-center px-4 border-l">
                     <svg className="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">

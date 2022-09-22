@@ -1,25 +1,14 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 
-const UserIp = () => {
 
-    const [ip, setIP] = useState('');
+const UserIp = ({currentIp}) => {
 
-    const getData = async () => {
-        const res = await axios.get('https://geolocation-db.com/json/')
-        console.log(res.data)
-        setIP(res.data.IPv4)
-    }
-
-    useEffect( () => {
-        getData()
-    }, [])
+    
 
     return (
-        <div>
+        <div className="flex items-center justify-center">
             <h1>Your IP Address is: </h1>
-            <h3>{ip}</h3>
+            <h3>{currentIp}</h3>
         </div>
     )
 }
