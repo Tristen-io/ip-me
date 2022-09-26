@@ -5,7 +5,7 @@ import WaveBackground from './components/WaveBackground';
 import SearchBar from './components/SearchBar';
 import Hero from './components/Hero';
 import UserIp from './components/UserIp';
-
+import MapComponent from './components/MapComponent';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -29,6 +29,9 @@ function App() {
       <UserIp currentIp={ip}/>
       <SearchBar currentIp={ip}/>
       <WaveBackground />
+      <div className="flex items-center justify-center p-10">
+        <MapComponent className="flex items-center justify-center p-10 rounded-lg"/>
+      </div>
     </>
   );
 }
